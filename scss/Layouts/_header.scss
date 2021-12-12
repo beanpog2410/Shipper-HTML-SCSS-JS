@@ -1,0 +1,74 @@
+.header {
+  .navbar-brand {
+    @include skew(-20deg);
+    overflow: hidden;
+    &:hover {
+      color: $color-info-light;
+      .brand-text {
+        opacity: 0.3;
+      }
+      .brand-logo {
+        @include moveToRight;
+        color: $color-error;
+      }
+    }
+  }
+  .brand-text {
+    font-weight: $fw-bold;
+  }
+  .brand-logo {
+    font-size: 2rem;
+    z-index: 10;
+    transition: all .5s ease-in;
+  }
+
+  .account {
+      button {
+          &:focus {
+              outline: none;
+              box-shadow: none;
+          }
+      }
+      .account-name {
+        font-weight: $fw-bold-1;
+      }
+  }
+
+  .menu {
+    a {
+      text-transform: uppercase;
+      position: relative;
+      margin-left: $spacing-1;
+      &::after {
+        content:'';
+        height: 5px;
+        background-color: $color-error-light;
+        width: 0;
+        transition: all .5s ease;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .signGroup {
+    .horizontalDiviner {
+      height: 2rem;
+      width: 2px;
+      background-color: $color-background-black;
+    }
+    .signUp {
+
+    }
+    .signIn {
+
+    }
+
+  }
+}

@@ -1,0 +1,49 @@
+.btnSignIn {
+  @include button($color-background-white, inherit, $color-warning-dark);
+  @include buttonHover(
+    $color-warning,
+    $color-background-white,
+    $color-background-white
+  );
+}
+
+.btnSignUp {
+  @include button(
+    $color-warning,
+    $color-background-white,
+    $color-background-white
+  );
+  @include buttonHover(
+    $color-background-white,
+    inherit,
+    $color-background-white
+  );
+}
+
+.btn-submit-form {
+    @include button(
+    $color-info,
+    $color-background-white,
+    $color-background-white
+  );
+  @include btnDrop;
+  display: block;
+  &:hover {
+    color: $color-background-white;
+  }
+}
+
+.btn-input-img {
+  @include button(
+    $color-info,
+    $color-background-white,
+    $color-background-white
+  );
+  @include buttonHover(
+    $color-background-white,
+    inherit,
+    $color-background-white
+  );
+  cursor: pointer;
+  border-radius: 4px;
+}

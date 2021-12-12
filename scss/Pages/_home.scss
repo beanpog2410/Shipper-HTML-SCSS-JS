@@ -1,0 +1,12 @@
+.banner {
+    .banner-background {
+        background-image: url('/image/banner.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 600px;
+    }
+    .banner-content {
+        padding-top: 15%;
+    }
+}

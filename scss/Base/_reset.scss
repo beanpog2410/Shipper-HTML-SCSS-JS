@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    font-size: $fs-0;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: $color-info-light;
+    &:hover {
+        color: $color-info-dark;
+    }
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul>li {
+    list-style-type: none;
+}

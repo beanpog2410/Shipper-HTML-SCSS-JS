@@ -1,0 +1,16 @@
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+  .dropdown-menu {
+    @include slideDown;
+  }
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,123 @@
+@mixin skew($deg) {
+  &:hover {
+    transform: skew($deg);
+  }
+  transition: all 0.5s ease;
+}
+
+@mixin moveToRight {
+  @keyframes run {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(500px);
+    }
+  }
+  animation: run 1.5s ease-in;
+}
+
+@mixin slideDown {
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-10%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: slideDown 0.5s ease;
+  overflow: hidden;
+}
+
+@mixin button($background, $color, $border-color) {
+  padding: $spacing-btnY $spacing-btnX;
+  margin: $spacing-0;
+  background-color: $background;
+  color: $color;
+  border: 1px solid $border-color;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all 0.25s ease;
+}
+
+@mixin buttonHover($background, $color, $border-color) {
+  &:hover {
+    background-color: $background;
+    color: $color;
+    border: 1px solid $border-color;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}
+
+@mixin zoomInHover {
+  &:hover {
+    transform: scale(1.2, 1.2);
+  }
+  transition: all 0.25s ease;
+}
+
+@mixin input {
+  position: relative;
+  display: inline-block;
+  margin-bottom: $spacing-0;
+  padding: $spacing-inputY $spacing-inputX;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  border-bottom: solid 1px $color-info;
+  width: 30%;
+  &::placeholder {
+    transition: all 0.3s ease;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $color-info-dark;
+    &::placeholder {
+      color: $color-info;
+      font-size: 11px;
+      transform: translateY(-20px);
+    }
+  }
+  &:invalid {
+    border-color: $color-error;
+    color: $color-error;
+    &::placeholder {
+      color: $color-error;
+    }
+  }
+  &:valid {
+    border-color: $color-info;
+    &::placeholder {
+      color: $color-info;
+    }
+  }
+}
+
+@mixin btnDrop {
+  align-self: center;
+  border-radius: 4px;
+  margin: $spacing-3 auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  transition: all 235ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+  }
+
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+  }
+}

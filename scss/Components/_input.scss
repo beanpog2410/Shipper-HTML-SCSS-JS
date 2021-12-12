@@ -1,0 +1,21 @@
+.input {
+    @include input;
+}
+
+.input-helpText {
+    display: none; // Trigger lỗi thì chuyển sang inline;
+    color: $color-error;
+    margin: 0 auto;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: $spacing-0;
+}
+
+.input-firstName {
+    width: 19%;
+    margin-right: $spacing-0;
+}
+
+.input-lastName {
+    width: 10%;
+}
