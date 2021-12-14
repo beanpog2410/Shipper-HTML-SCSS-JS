@@ -33,6 +33,63 @@
   overflow: hidden;
 }
 
+@mixin fadeUp {
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: fadeUp 1s ease;
+}
+@mixin fadeDown {
+  @keyframes fadeDown {
+    0% {
+      transform: translateY(-70%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: fadeDown 1s ease;
+}
+@mixin fadeLeft {
+  @keyframes fadeLeft {
+    0% {
+      transform: translateX(70%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  animation: fadeLeft 1s ease;
+}
+@mixin fadeRight {
+  @keyframes fadeRight {
+    0% {
+      transform: translateX(-70%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  animation: fadeRight 1s ease;
+}
+
 @mixin button($background, $color, $border-color) {
   padding: $spacing-btnY $spacing-btnX;
   margin: $spacing-0;

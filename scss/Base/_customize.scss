@@ -1,0 +1,21 @@
+.preloader {
+    display: flex;
+}
+.fadeUp {
+    @include fadeUp;
+}
+.fadeDown {
+    @include fadeDown;
+}
+.fadeRight {
+    @include fadeRight;
+}
+.fadeLeft {
+    @include fadeLeft;
+}
+.scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}

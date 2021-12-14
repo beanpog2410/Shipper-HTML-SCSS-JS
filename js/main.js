@@ -1,3 +1,11 @@
+
+// Preloader
+window.onload = function() {
+  let preloader = document.querySelector(".preloader");
+  preloader.style.display = "none";
+}
+
+
 function showAvatar() {
   var file = document.getElementById("file").files[0];
   var reader = new FileReader();
@@ -5,7 +13,6 @@ function showAvatar() {
   reader.addEventListener(
     "load",
     function () {
-      // convert image file to base64 string
       avatarImg.src = reader.result;
     },
     false
@@ -36,6 +43,48 @@ function showAvatar() {
 //   }
 // }
 
+// Scroll to Top
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const checkScroll = () => {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    document.querySelector(".scrollToTop").style.display = "block";
+} else {
+     document.querySelector(".scrollToTop").style.display = "none";
+}
+}
+
+window.onscroll = () => {checkScroll()}
+
+//Animate on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {  
+    const item = entry.target.querySelectorAll('.info-item');
+
+    if (entry.isIntersecting) {
+      for (let i = 0; i < 4; i++) {
+        let cls = '';
+        switch (i) {
+          case 0 : cls = 'fadeRight'; break;
+          case 1 : cls = 'fadeDown'; break;
+          case 2 : cls = 'fadeUp'; break;
+          case 3 : cls = 'fadeLeft'; break;
+        }
+        item.item(i).classList.add(cls);
+      }
+	  return; 
+    }
+
+    item.forEach(i => {
+      i.classList.remove('fadeUp', 'fadeDown', 'fadeRight', 'fadeLeft');
+    })
+  });
+});
+
+observer.observe(document.querySelector('.info-content'));  
 
 // Confirm password
 var password = document.getElementById("password");

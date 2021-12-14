@@ -21,7 +21,7 @@
 }
 
 .btn-submit-form {
-    @include button(
+  @include button(
     $color-info,
     $color-background-white,
     $color-background-white
@@ -46,4 +46,58 @@
   );
   cursor: pointer;
   border-radius: 4px;
+}
+
+.btn-order {
+  @include button(
+    $color-info,
+    $color-background-white,
+    none
+  );
+  @include buttonHover(
+    $color-background-white,
+    inherit,
+    none
+  );
+  cursor: pointer;
+  border-bottom-left-radius: 25% 100%;
+  border-bottom-right-radius: 25% 100%;
+  border-top-left-radius: 25% 100%;
+  border-top-right-radius: 25% 100%;
+}
+.btn-readmore {
+  
+  @include button(
+    $color-primary,
+    $color-background-white,
+    none
+  );
+  @include buttonHover(
+    $color-background-white,
+    inherit,
+    none
+  );
+  border-bottom-left-radius: 25% 100%;
+  border-bottom-right-radius: 25% 100%;
+  border-top-left-radius: 25% 100%;
+  border-top-right-radius: 25% 100%;
+}
+
+.btn-scrollTT {
+  @keyframes btnstt {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  font-size: 2rem;
+  color: $color-secondary-light;
+  animation: btnstt 0.5s cubic-bezier(.4,.75,.86,.71);
+  &:hover {
+    color: $color-success;
+  }
 }
