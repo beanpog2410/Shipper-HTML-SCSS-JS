@@ -1,0 +1,66 @@
+#profile {
+  .profile-nav {
+    padding: $spacing-2 $spacing-0;
+  }
+  .profile-img {
+    background-color: rgba($color-info-light, 0.4);
+    padding: $spacing-2;
+    text-align: center;
+    border-radius: 4px;
+    img {
+      border-radius: $border-round;
+    }
+    h2 {
+      margin-top: $spacing-0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .profile-nav-menu {
+    flex-direction: column;
+    li {
+      padding: $spacing-0 $spacing-1;
+      background-color: $color-dark-light;
+      border-radius: 4px;
+      margin: 4px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        border-left: 8px solid $color-error-light;
+        background-color: rgba($color-dark-light, 0.3);
+      }
+    }
+    li.active {
+      border-left: 8px solid $color-error-light;
+      background-color: rgba($color-dark-light, 0.3);
+    }
+    a {
+      color: $color-text-black;
+    }
+    i {
+      margin-right: $spacing-0;
+    }
+  }
+  .profile-info {
+      font-size: 18px;
+      font-weight: 600;
+    span {
+        width: 150px;
+        display: inline-block;
+        font-weight: 400 !important;
+    }
+  }
+  h1.title {
+    text-align: center;
+    margin-bottom: $spacing-6;
+  }
+  .order-list {
+      span {
+          float: right;
+      }
+      a {
+          
+      }
+  }
+}
