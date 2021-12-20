@@ -59,6 +59,17 @@ const checkScroll = () => {
 
 window.onscroll = () => {checkScroll()}
 
+// Pass data to modal
+var modalInput = document.querySelector("#price");
+var btnAuction = document.querySelectorAll(".btnAuction");
+btnAuction.forEach((btn)=> {
+  btn.addEventListener("click", () => {
+    console.log(btn);
+    let data = btn.getAttribute("data");
+    modalInput.value = data;
+  }) 
+})
+
 //Animate on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {  
@@ -85,6 +96,8 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector('.info-content'));  
+
+
 
 // Confirm password
 var password = document.getElementById("password");

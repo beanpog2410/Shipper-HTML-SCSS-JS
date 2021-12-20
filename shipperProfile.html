@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap v5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS main -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="justify-content-center align-items-center preloader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-light navbar-expand-lg bg-light sticky-top">
+            <div class="container header">
+                <a class="navbar-brand row justify-content-center align-items-center" href="#">
+                    <i class="fa fa-shipping-fast brand-logo col"></i>
+                    <h1 class="brand-text col">ShipEveryWhere</h1>
+                </a>
+                <div class="collapse navbar-collapse me-auto menu" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nhân viên</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Đặt đơn</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Phần đăng nhập/đăng ký -->
+                <div class="signGroup d-flex justify-content-center align-items-center">
+                    <a href="#" class="btn btnSignUp">Đăng ký</a>
+                    <div class="horizontalDiviner"></div>
+                    <a href="#" class="btn btnSignIn">Đăng nhập</a>
+                </div>
+
+                <!-- Phần này đã đăng nhập mới có -->
+                <div class="account dropdown">
+                    <div class="dropdown-toggle d-flex flex-direction-row justify-content-center align-items-center">
+                        <!-- <i class="fa fa-user-circle account-icon"></i> -->
+                        <img src="./image/Suar.png" alt='avatar' class="rounded-circle border border-primary me-2"
+                            width="50" height="50" />
+                        <div class="account-name">Name</div>
+                    </div>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
+                        <li><a class="dropdown-item" href="#">Lịch sử đơn hàng</a></li>
+                        <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile -->
+    <section id="profile">
+        <div class="container my-5">
+            <div class="row">
+                <div class="profile-nav col-md-3">
+                    <div class="panel">
+                        <div class="profile-img ">
+                            <a href="#">
+                                <img src="/image/Suar.png" class="w-100" alt="">
+                            </a>
+                            <h2>Tôi tên là</h2>
+                            <div class="rate">
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star active"></i>
+                                <i class="fa fa-star-half-alt active"></i>
+                            </div>
+                            <p>Số điện thoại: <a href="tel:+0364552651">0364552***</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Bình luận -->
+                <div class="comment col-md-9">
+                    <h1 class="title">Bình luận và đánh giá</h1>
+                    <!-- Đăng nhập rồi mới có -->
+                    <div class="row cmt-input align-items-center justify-content-center">
+                        <div class="current-user-avatar col-2">
+                            <img class="avatar w-100 h-100" src="/image/Suar.png" alt="nothing">
+                        </div>
+                        <form class="d-flex col-10" action="" method="post">
+                            <textarea class="flex-fill input" id="comment" rows="1" type="text" placeholder="Nhập bình luận"></textarea>
+                            <button class="btn btn-readmore" type="submit">Bình luận</button>
+                        </form>
+                    </div>
+                    <!-- End input block -->
+                    <div class="comment-box row justify-content-end">
+                        <div class="comment-item row col-12">
+                            <div class="current-user-avatar col-2">
+                                <img class="avatar w-100 h-100" src="/image/Suar.png" alt="nothing">
+                            </div>
+                            <div class="comment-content col-10">
+                                <b>Name</b> <span>29/10/2000</span>
+                                <br>
+                                <div class="comment-text">
+                                    Một hai ba bốn năm sáu bảy tám chín mười mười một mười hai mười ba
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item row col-12">
+                            <div class="current-user-avatar col-2">
+                                <img class="avatar w-100 h-100" src="/image/Suar.png" alt="nothing">
+                            </div>
+                            <div class="comment-content col-10">
+                                <b>Name</b> <span>29/10/2000</span>
+                                <br>
+                                <div class="comment-text">
+                                    Một hai ba bốn năm sáu bảy tám chín mười mười một mười hai mười ba, Một hai ba bốn năm sáu bảy tám chín mười mười một mười hai mười ba, Một hai ba bốn năm sáu bảy tám chín mười mười một mười hai mười ba
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-item row col-12">
+                            <div class="current-user-avatar col-2">
+                                <img class="avatar w-100 h-100" src="/image/Suar.png" alt="nothing">
+                            </div>
+                            <div class="comment-content col-10">
+                                <b>Name</b> <span>29/10/2000</span>
+                                <br>
+                                <div class="comment-text">
+                                    Một hai ba bốn năm sáu bảy tám chín mười mười một mười hai mười ba
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <nav class="mt-auto footer justify-content-center">
+        <div class="container-fluid row align-items-start">
+            <div class="col-4">
+                <h4 class="footer-title text-center">Menu 1</h4>
+                <ul class="footer-menu text-center">
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 1</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 2</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 3</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h4 class="footer-title text-center">Menu 2</h4>
+                <ul class="footer-menu text-center">
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 1</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 2</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 3</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#"> Link 4</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h4 class="footer-title text-center mb-5">Social</h4>
+                <div class="social-group d-flex justify-content-center">
+                    <a class="face" href=""><i class="fab fa-facebook-square"></i></a>
+                    <a class="twit" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="insta" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="tele" href=""><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <hr />
+            <div class="copyright text-center col-12 mb-2" href="#">
+                Copyright © 2021 by <a class="creator" href="#">BeanPog</a>.
+                All rights reserved.
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll to Top Button -->
+    <div class="scrollToTop">
+        <button onclick=scrollToTop() class="btn btn-scrollTT"><i class="fa fa-arrow-alt-circle-up"></i></button>
+    </div>
+
+    <!-- Bootstrap v5 script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- JS Main -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

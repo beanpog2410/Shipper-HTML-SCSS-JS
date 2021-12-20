@@ -19,3 +19,36 @@
     bottom: 10%;
     right: 5%;
 }
+
+.rate {
+    .fa.active {
+      color: $color-error-light;
+    }
+    margin-bottom: $spacing-0;
+  }
+
+  .search-bar {
+    input {
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    button {
+        border: none;
+    }
+}
+.sort {
+    select {
+        font-weight: bold;
+        display: inline-flex;
+        border: none;
+        width: 15%;
+        padding: 0 $spacing-0;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}

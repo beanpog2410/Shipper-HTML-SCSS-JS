@@ -60,4 +60,38 @@
           float: right;
       }
   }
+
+  // 
+  .cmt-input {
+    margin-bottom: $spacing-5;
+    textarea {
+      padding: $spacing-0 $spacing-1;
+    }
+  }
+  .current-user-avatar {
+    width: 80px;
+    height: 55px;
+    img {
+      border: 2px solid $color-success-dark;
+      border-radius: $border-round;
+    }
+    
+  }
+
+  .comment-box {
+    margin-left: $spacing-5;
+  }
+  .comment-item {
+    background-color: $color-dark-light;
+    margin: $spacing-0;
+    padding: $spacing-1 $spacing-2;
+    border-radius: 5px;
+  }
+  .comment-content {
+    span {
+      float: right;
+      font-size: small;
+      font-style: italic;
+    }
+  }
 }
